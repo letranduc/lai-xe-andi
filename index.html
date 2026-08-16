@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            --primary: #e74c3c;
-            --primary-dark: #c0392b;
+            --primary: #e67e22;
+            --primary-dark: #d35400;
             --secondary: #2c3e50;
             --accent: #f39c12;
             --light-bg: #f8f9fa;
@@ -90,7 +90,7 @@
         .btn-primary:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(231,76,60,0.3);
+            box-shadow: 0 8px 20px rgba(230,126,34,0.3);
         }
         .btn-outline {
             background: transparent;
@@ -229,7 +229,7 @@
             right: -10%;
             width: 400px;
             height: 400px;
-            background: rgba(231,76,60,0.15);
+            background: rgba(230,126,34,0.15);
             border-radius: 50%;
         }
         .hero .container {
@@ -637,7 +637,7 @@
 
         /* Registration form */
         .registration {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: var(--white);
         }
         .registration .section-title h2 {
@@ -673,7 +673,7 @@
         .form-group select:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(231,76,60,0.1);
+            box-shadow: 0 0 0 3px rgba(230,126,34,0.1);
         }
 
         /* Footer */
@@ -875,9 +875,9 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Học Lái Xe An Di",
-        "image": "https://www.hoclaixeandi.vn/images/logo.png",
+        "image": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/3769e7a87f434b38fe78cb01d0b042e3~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=78fd6c89&x-expires=1787043600&x-signature=%2BVoU8XSy3mek7tumcnyovgSacNA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my",
         "url": "https://www.hoclaixeandi.vn/",
-        "telephone": "0900 000 000",
+        "telephone": "08 3333 7366",
         "email": "info@hoclaixeandi.vn",
         "address": {
             "@type": "PostalAddress",
@@ -1010,7 +1010,7 @@
             <div class="header-right">
                 <div class="header-contact">
                     <i class="fas fa-phone-alt"></i>
-                    <span>0900 000 000</span>
+                    <span>08 3333 7366</span>
                 </div>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu">
                     <i class="fas fa-bars"></i>
@@ -1036,7 +1036,7 @@
                 <h1>Học Lái Xe <span>Ô Tô & Xe Máy</span> Tại Thủ Đức – Bằng B1, B2, A1</h1>
                 <p>An Di đồng hành trọn gói từ A-Z: hồ sơ, lý thuyết, thực hành đến thi sát hạch. Giảng viên 1 kèm 1, lịch học linh hoạt, có xe đưa đón tận nhà. Cam kết tỷ lệ đậu 98%.</p>
                 <div class="hero-buttons">
-                    <a href="#dang-ky" class="btn btn-primary">🚗 Đăng ký tư vấn miễn phí</a>
+                    <a href="#dang-ky" class="btn btn-primary">Đăng ký tư vấn miễn phí</a>
                     <a href="https://www.tiktok.com/@hoclaixeandi" target="_blank" class="btn btn-outline" style="color:white;border-color:white;">▶ Xem video TikTok</a>
                 </div>
                 <div class="hero-stats">
@@ -1298,20 +1298,103 @@
                 <p>Mẹo học lái, video thực tế sân tập mỗi ngày</p>
             </div>
             <div class="tiktok-embed">
-                <div class="tiktok-placeholder" onclick="window.open('https://www.tiktok.com/@hoclaixeandi','_blank')">
+                <style>
+                .tiktok-placeholder {
+                    position: relative;
+                    width: 200px;
+                    height: 280px;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                    display: inline-block;
+                    margin: 10px;
+                    background: #000;
+                }
+                .tiktok-thumb {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s;
+                }
+                .tiktok-placeholder:hover .tiktok-thumb {
+                    transform: scale(1.05);
+                }
+                .tiktok-overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 15px;
+                    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-weight: bold;
+                }
+                .tiktok-overlay i {
+                    font-size: 20px;
+                }
+                </style>
+
+                <div class="tiktok-placeholder" 
+                    data-video-url="https://www.tiktok.com/@hoclaixeandi/video/7604897837943459080"
+                    onclick="window.open(this.dataset.videoUrl,'_blank')">
+                <img class="tiktok-thumb" src="" alt="Video 1 thumbnail" loading="lazy">
+                <div class="tiktok-overlay">
                     <i class="fab fa-tiktok"></i>
                     <span>Video 1</span>
                 </div>
-                <div class="tiktok-placeholder" onclick="window.open('https://www.tiktok.com/@hoclaixeandi','_blank')">
+                </div>
+
+                <div class="tiktok-placeholder" 
+                    data-video-url="https://www.tiktok.com/@hoclaixeandi/video/7539919914421816584"
+                    onclick="window.open(this.dataset.videoUrl,'_blank')">
+                <img class="tiktok-thumb" src="" alt="Video 2 thumbnail" loading="lazy">
+                <div class="tiktok-overlay">
                     <i class="fab fa-tiktok"></i>
                     <span>Video 2</span>
                 </div>
-                <div class="tiktok-placeholder" onclick="window.open('https://www.tiktok.com/@hoclaixeandi','_blank')">
+                </div>
+
+                <div class="tiktok-placeholder" 
+                    data-video-url="https://www.tiktok.com/@hoclaixeandi/video/7518051728697150728"
+                    onclick="window.open(this.dataset.videoUrl,'_blank')">
+                <img class="tiktok-thumb" src="" alt="Video 3 thumbnail" loading="lazy">
+                <div class="tiktok-overlay">
                     <i class="fab fa-tiktok"></i>
                     <span>Video 3</span>
                 </div>
+                </div>
+
+                <script>
+                document.querySelectorAll('.tiktok-placeholder').forEach(placeholder => {
+                    const videoUrl = placeholder.dataset.videoUrl;
+                    const img = placeholder.querySelector('.tiktok-thumb');
+
+                    if (videoUrl && img) {
+                    fetch(`https://www.tiktok.com/oembed?url=${encodeURIComponent(videoUrl)}`)
+                        .then(response => response.json())
+                        .then(data => {
+                        if (data.thumbnail_url) {
+                            img.src = data.thumbnail_url;
+                        }
+                        })
+                        .catch(error => {
+                        console.error('Lỗi tải thumbnail:', error);
+                        // Fallback: đặt ảnh nền màu đen hoặc icon TikTok
+                        img.style.display = 'none';
+                        });
+                    }
+                });
+                </script>
+</div>
             </div>
-            <a href="https://www.tiktok.com/@hoclaixeandi" target="_blank" class="btn btn-primary" style="margin-top:30px;">👉 Follow TikTok @hoclaixeandi</a>
+                <a href="https://www.tiktok.com/@hoclaixeandi" target="_blank" class="btn btn-primary" style="margin-top:30px; display:block; width:fit-content; margin-left:auto; margin-right:auto;">Follow TikTok @hoclaixeandi</a>
         </div>
     </section>
 
@@ -1457,10 +1540,10 @@
                 <div class="footer-col">
                     <h3>Học Lái Xe An Di</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận Thủ Đức, TP.HCM</li>
-                        <li><i class="fas fa-phone-alt"></i> 0900 000 000</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Số 1, Đường số 9, phường Thủ Đức, TP.HCM</li>
+                        <li><i class="fas fa-phone-alt"></i> 08 3333 7366 </li>
                         <li><i class="fas fa-envelope"></i> info@hoclaixeandi.vn</li>
-                        <li><i class="fas fa-clock"></i> 7:00 - 20:00 tất cả các ngày</li>
+                        <li><i class="fas fa-clock"></i> 8:00 - 17:00 tất cả các ngày</li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1485,7 +1568,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2025 Học Lái Xe An Di. All rights reserved.
+                &copy; 2026 Học Lái Xe An Di. All rights reserved.
             </div>
         </div>
     </footer>
